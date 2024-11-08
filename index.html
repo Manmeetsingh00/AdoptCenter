@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adopt Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="header">
+    <nav id="nav">
+      <div class="nav-left">
+        <a href="#">Adopt Center</a>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Featured Pets</a></li>
+          <li><a href="#">Adoption Process</a></li>
+          <li><a href="#">Care Cost</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+     <div class="heroconttent">
+        <h1>Find Your Furry Friend</h1>
+        <p>Adopt a pet and give them a loving home.</p>
+     </div>
+    </section>
+    
+    <section id="featured-pets">
+        <h2>All Available Pets</h2>
+      <div class="pet-card hidden">
+        <img src="images/dog.jpg" alt="Dog" class="pet-image">
+        <h3>Buddy</h3>
+        <p>Breed: Labrador Retriever</p>
+        <a href="#contact" class="pick-me-btn">Pick Me</a>
+      </div>
+      <div class="pet-card hidden">
+        <img src="images/cat.jpg" alt="Cat" class="pet-image">
+        <h3>Mittens</h3>
+        <p>Breed: Siamese</p>
+        <a href="#contact" class="pick-me-btn">Pick Me</a>
+      </div>
+      <div class="pet-card hidden">
+        <img src="images/rabbit.jpg" alt="Rabbit" class="pet-image">
+        <h3>Thumper</h3>
+        <p>Breed: Holland Lop</p>
+        <a href="#contact" class="pick-me-btn">Pick Me</a>
+      </div>
+      <div class="pet-card hidden">
+        <img src="images/parrot.jpg" alt="Parrot" class="pet-image">
+        <h3>Polly</h3>
+        <p>Breed: African Grey</p>
+        <a href="#contact" class="pick-me-btn">Pick Me</a>
+      </div>
+      <div class="pet-card hidden">
+        <img src="images/bird.avif" alt="Bird" class="pet-image">
+        <h3>Chirpy</h3>
+        <p>Breed: Canary</p>
+        <a href="#contact" class="pick-me-btn">Pick Me</a>
+      </div>
+      <div class="pet-card hidden">
+        <img src="images/hamester.jpg" alt="Hamster" class="pet-image">
+        <h3>Nibbles</h3>
+        <p>Breed: Syrian Hamster</p>
+        <a href="#contact" class="pick-me-btn">Pick Me</a>
+      </div>
+      <div class="pet-card hidden">
+        <img src="images/turtle.jpg" alt="Turtle" class="pet-image">
+        <h3>Speedy</h3>
+        <p>Breed: Red-Eared Slider</p>
+        <a href="#contact" class="pick-me-btn">Pick Me</a>
+        </div>
+      <div class="pet-card hidden">
+        <img src="images/guineapig.jpg" alt="Guinea Pig" class="pet-image">
+        <h3>Snickers</h3>
+        <p>Breed: American Guinea Pig</p>
+        <a href="#contact" class="pick-me-btn">Pick Me</a>
+      </div>
+      <div class="pet-card hidden">
+        <img src="images/whiskers.jpg" alt="Ferret" class="pet-image">
+        <h3>Whiskers</h3>
+        <p>Breed: Domestic Ferret</p>
+        <a href="#contact" class="pick-me-btn">Pick Me</a>
+      </div>
+      <div class="pet-card hidden">
+        <img src="images/shetlandpony.jpg" alt="Pony" class="pet-image">
+        <h3>Star</h3>
+        <p>Breed: Shetland Pony</p>
+        <a href="#contact" class="pick-me-btn">Pick Me</a>
+      </div>
+      <div class="pet-card hidden">
+        <img src="images/Pet-of-the-Week-Prickles-alone.jpg" alt="Hedgehog" class="pet-image">
+        <h3>Prickles</h3>
+        <p>Breed: African Pygmy Hedgehog</p>
+        <a href="#contact" class="pick-me-btn">Pick Me</a>
+      </div>
+     
+    </section>
+    
+
+    <section id="adoption-process">
+      <h2>Adoption Process</h2>
+      <ol>
+        <li>Browse Our Pets</li>
+        <li>Submit an Application</li>
+        <li>Meet the Pet</li>
+        <li>Bring Your New Friend Home</li>
+      </ol>
+    </section>
+
+    <section id="care-cost">
+        <h2>Care Cost Calculator</h2>
+        <form id="care-cost-form">
+          <div class="form-group">
+            <label for="pet-name">Pet Name:</label>
+            <input type="text" id="pet-name" name="pet-name" placeholder="Enter pet's name" required>
+          </div>
+          <div class="form-group">
+            <label for="pet-type">Pet Type:</label>
+            <input type="text" id="pet-type" name="pet-type" placeholder="e.g., Dog, Cat, Rabbit" required>
+          </div>
+          <div class="form-group">
+            <label for="pet-age">Pet Age (Years):</label>
+            <input type="number" id="pet-age" name="pet-age" placeholder="e.g., 3" required min="0">
+          </div>
+          <div class="form-group">
+            <label for="food-cost">Monthly Food Cost (INR):</label>
+            <input type="number" id="food-cost" name="food-cost" placeholder="e.g., 2000" required min="0">
+          </div>
+          <div class="form-group">
+            <label for="vet-cost">Monthly Vet Cost (INR):</label>
+            <input type="number" id="vet-cost" name="vet-cost" placeholder="e.g., 1500" required min="0">
+          </div>
+          <div class="form-group">
+            <label for="grooming-cost">Monthly Grooming Cost (INR):</label>
+            <input type="number" id="grooming-cost" name="grooming-cost" placeholder="e.g., 1000" min="0">
+          </div>
+          <div class="form-group">
+            <label for="other-cost">Other Monthly Expenses (INR):</label>
+            <input type="number" id="other-cost" name="other-cost" placeholder="e.g., 500" min="0">
+          </div>
+          <button type="submit" class="btn">Calculate Total Cost</button>
+        </form>
+        <div id="care-cost-result"></div>
+      </section>
+      
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <p>&copy; 2024 Adopt Center. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

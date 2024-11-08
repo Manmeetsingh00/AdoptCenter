@@ -1,0 +1,441 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#header {
+  height: 10vh;
+  width: 100%;
+  background-color: whitesmoke;
+  border-top: 0.1px solid black;
+  border-bottom: 0.1px solid black;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 2vw;
+}
+
+.nav-left a {
+  font-size: 35px;
+  letter-spacing: -1px;
+  font-family: Impact, sans-serif;
+  font-weight: 600;
+}
+
+.nav-right ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right li {
+  margin-left: 30px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  border: 0.1px solid black;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-right a:hover {
+  background-color: orangered;
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #333;
+}
+
+#hero {
+  height: 70vh;
+  border: 0.1px solid black;
+  margin: 10vh 10vh;
+  position: relative;
+  background-image: url("images/logo.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+.heroconttent {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  color: black;
+  transform: translate(-50%, 0);
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .heroconttent {
+    bottom: 5%;
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroconttent {
+    bottom: 2%;
+    width: 95%;
+    padding: 10px;
+    font-size: 0.9em;
+  }
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: orangered;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: darkred;
+}
+
+#featured-pets {
+  padding: 3vh 10vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.pet-card {
+  padding: 15px;
+  transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: scale(1.05);
+}
+
+.pet-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.pick-me-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff6600;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.pick-me-btn:hover {
+  background-color: darkred;
+  color: white;
+}
+
+#adoption-process {
+  padding: 3vh 10vh;
+  border-top: 0.1px solid black;
+  border-bottom: 0.1px solid black;
+}
+
+#adoption-process ol {
+  counter-reset: item;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#adoption-process li {
+  counter-increment: item;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+
+#adoption-process li:before {
+  content: counter(item);
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 1rem;
+  color: orangered;
+}
+
+#care-cost {
+  padding: 3vh 10vw;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#care-cost h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#care-cost-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+#care-cost-form .form-group {
+  width: 100%;
+}
+
+#care-cost-form label {
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+#care-cost-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+#care-cost-form input:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+#care-cost-form .btn {
+  grid-column: span 2;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6600;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#care-cost-form .btn:hover {
+  background-color: darkred;
+}
+
+#care-cost-result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  #care-cost-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+#contact {
+  padding: 3vh 10vh;
+  border-top: 0.1px solid black;
+}
+
+#contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+#contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#contact-form textarea {
+  resize: vertical;
+}
+
+#contact-form button {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+#footer {
+  background-color: orangered;
+  color: white;
+  padding: 2vh 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .nav-right {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-right.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: whitesmoke;
+    padding: 1rem 0;
+    z-index: 1;
+    border-bottom: 0.1px solid black;
+  }
+
+  .nav-right.active li {
+    margin: 0.5rem 0;
+  }
+
+  #contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  #contact-form button {
+    grid-column: auto;
+  }
+
+  #hero h1 {
+    font-size: 8vw;
+  }
+
+  #hero p {
+    font-size: 4vw;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add these animation classes */
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional different animations for elements coming from left/right */
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease;
+}
+
+.hidden-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 1s ease;
+}
