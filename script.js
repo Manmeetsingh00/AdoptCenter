@@ -14,23 +14,14 @@ careCostForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const petType = document.getElementById('pet-type').value;
-  let monthlyCost;
+  const foodCost = parseFloat(document.getElementById('food-cost').value) || 0;
+  const vetCost = parseFloat(document.getElementById('vet-cost').value) || 0;
+  const groomingCost = parseFloat(document.getElementById('grooming-cost').value) || 0;
+  const otherCost = parseFloat(document.getElementById('other-cost').value) || 0;
 
-  switch (petType) {
-    case 'dog':
-      monthlyCost = 500;
-      break;
-    case 'cat':
-      monthlyCost = 300;
-      break;
-    case 'small-animal':
-      monthlyCost = 100;
-      break;
-    default:
-      monthlyCost = 0;
-  }
+  const totalMonthlyCost = foodCost + vetCost + groomingCost + otherCost;
 
-  careCostResult.textContent = `The estimated monthly cost for a ${petType} is $${monthlyCost}.`;
+  careCostResult.textContent = `The estimated monthly cost for a ${petType} is ₹${totalMonthlyCost}.`;
 });
 
 
